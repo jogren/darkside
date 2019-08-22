@@ -2,10 +2,19 @@ import React from 'react';
 import Card from '../Card/Card'
 import './Container.css';
 
-const Container = ({ data }) => {
+const Container = ({ data, type }) => {
+  console.log('data', data)
+  console.log(typeof type)
   const dataCards = data.map((card, index) => {
-    // console.log(index)
-    return <Card planet={card} key={index}/>
+    if(type === 'planets') {
+      return <Card planets={card} key={index}/>
+    }
+    if(type === 'people') {
+      return <Card people={card} key={index}/>
+    }
+    if(type === 'vehicles') {
+      return <Card vehicles={card} key={index}/>
+    }
   })
   return (
     <output>

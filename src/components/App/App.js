@@ -28,17 +28,17 @@ class App extends Component {
       .then(data => apiCalls.cleanPlanetData(data.results))
       .then(planets => this.setState({ planets, isLoading: false }))
 
-    // fetch('https://swapi.co/api/people/')
-    //   .then(res => res.json())
-    //   .then(data => apiCalls.cleanPeopleData(data.results))
-    //   .then(data => apiCalls.getPeopleHomes(data))
-    //   .then(data => apiCalls.getSpecies(data))
-    //   .then(people => this.setState({ people }))
+    fetch('https://swapi.co/api/people/')
+      .then(res => res.json())
+      .then(data => apiCalls.cleanPeopleData(data.results))
+      .then(data => apiCalls.getPeopleHomes(data))
+      .then(data => apiCalls.getSpecies(data))
+      .then(people => this.setState({ people }))
 
-    // fetch('https://swapi.co/api/vehicles/')
-    //   .then(res => res.json())
-    //   .then(data => apiCalls.cleanVehicles(data.results))
-    //   .then(vehicles => this.setState({ vehicles }))
+    fetch('https://swapi.co/api/vehicles/')
+      .then(res => res.json())
+      .then(data => apiCalls.cleanVehicles(data.results))
+      .then(vehicles => this.setState({ vehicles }))
   
     }
     
@@ -51,9 +51,9 @@ class App extends Component {
           <h1>LightSide</h1>
         </header>
         <Nav />
-      { !!planets.length && !isLoading && <Container data={planets} /> }
-      {/* { !!people.length && <Container data={people} /> }
-      { !!vehicles.length && <Container data={vehicles} /> } */}
+      {/* { !!planets.length && !isLoading && <Container data={planets} type="planets"/> } */}
+      {/* { !!people.length && !isLoading && <Container data={people} type="people" /> } */}
+      { !!vehicles.length && !isLoading && <Container data={vehicles} type="vehicles"/> }
       </main>
     );
   }
