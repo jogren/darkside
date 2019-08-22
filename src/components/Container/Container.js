@@ -1,11 +1,15 @@
 import React from 'react';
+import Card from '../Card/Card'
 import './Container.css';
 
-const Container = () => {
-
+const Container = ({ data }) => {
+  const dataCards = data.map((card, index) => {
+    // console.log(index)
+    return <Card planet={card} key={index}/>
+  })
   return (
     <output>
-      <h3>This is the container</h3>
+      {dataCards}
     </output>
   )
 }

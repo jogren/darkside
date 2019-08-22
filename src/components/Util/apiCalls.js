@@ -1,12 +1,15 @@
  const apiCalls = {
   cleanPlanetData: (data) => {
-    return data.map(planet => {
-      let namesArray = [];
+    console.log(data)
+    const planets = data.map(planet => {
+      var namesArray = [];
       planet.residents.map(person => {
         return fetch(person)
         .then(res => res.json())
         .then(data => namesArray.push(data.name))
+        .catch(error => console.log(error))
       });
+      console.log(namesArray, namesArray.length)
       return {
         name: planet.name,
         terrain: planet.terrain,
@@ -15,6 +18,8 @@
         residents: namesArray
       }
     });
+    console.log('planets', planets)
+    return planets;
   },
 
   cleanPeopleData: (data) => {
