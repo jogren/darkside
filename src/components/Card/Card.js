@@ -14,7 +14,7 @@ const Card = (props) => {
       <p>{terrain}</p>
       <p>{climate}</p>
       <p>{population}</p>
-      <p>{console.log(residents)}</p>
+      <p>{residents[0]}</p>
       </Fragment>
     )
   }
