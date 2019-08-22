@@ -1,25 +1,22 @@
  const apiCalls = {
   cleanPlanetData: (data) => {
-    console.log(data)
     const planets = data.map(planet => {
-      var namesArray = [];
-      planet.residents.map(person => {
+      var namesArray = planet.residents.map(person => {
         return fetch(person)
         .then(res => res.json())
-        .then(data => namesArray.push(data.name))
+        .then(data => data.name)
         .catch(error => console.log(error))
       });
-      console.log(namesArray, namesArray.length)
-      return {
-        name: planet.name,
-        terrain: planet.terrain,
-        population: planet.population,
-        climate: planet.climate,
-        residents: namesArray
-      }
+      return Promise.all(namesArray)
+        .then(names => ({
+          name: planet.name,
+          terrain: planet.terrain,
+          population: planet.population,
+          climate: planet.climate,
+          residents: names
+        }))
     });
-    console.log('planets', planets)
-    return planets;
+    return Promise.all(planets)
   },
 
   cleanPeopleData: (data) => {

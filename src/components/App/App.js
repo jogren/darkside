@@ -12,7 +12,8 @@ class App extends Component {
       people: [],
       vehicles: [],
       favorites: [],
-      crawl: ''
+      crawl: '',
+      isLoading: true
     }
   }
 
@@ -25,7 +26,7 @@ class App extends Component {
     fetch('https://swapi.co/api/planets/')
       .then(res => res.json())
       .then(data => apiCalls.cleanPlanetData(data.results))
-      .then(planets => this.setState({ planets }))
+      .then(planets => this.setState({ planets, isLoading: false }))
 
     // fetch('https://swapi.co/api/people/')
     //   .then(res => res.json())
@@ -43,14 +44,14 @@ class App extends Component {
     
     render() {
       // console.log(this.state.planets)
-      const { planets, people, vehicles, favorites, crawl } = this.state;
+      const { planets, people, vehicles, favorites, crawl, isLoading } = this.state;
       return (
         <main className="App-main">
         <header className="App-header">
           <h1>LightSide</h1>
         </header>
         <Nav />
-      { !!planets.length && <Container data={planets} /> }
+      { !!planets.length && !isLoading && <Container data={planets} /> }
       {/* { !!people.length && <Container data={people} /> }
       { !!vehicles.length && <Container data={vehicles} /> } */}
       </main>
