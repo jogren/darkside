@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 import Container from '../Container/Container';
 import './App.css';
-import apiCalls from '../Util/apiCalls'
+import apiCalls from '../Util/apiCalls';
+import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -48,12 +49,17 @@ class App extends Component {
       return (
         <main className="App-main">
         <header className="App-header">
+          <Link exact to='/'>
           <h1>LightSide</h1>
+          </Link> 
         </header>
         <Nav />
+        <Route exact path='/planets' render={() => <Container data={planets} type="planets" />} />
+        <Route exact path='/people' render={() => <Container data={people} type="people" />} />
+        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" />} />
       {/* { !!planets.length && !isLoading && <Container data={planets} type="planets"/> } */}
       {/* { !!people.length && !isLoading && <Container data={people} type="people" /> } */}
-      { !!vehicles.length && !isLoading && <Container data={vehicles} type="vehicles"/> }
+      {/* { !!vehicles.length && !isLoading && <Container data={vehicles} type="vehicles"/> } */}
       </main>
     );
   }

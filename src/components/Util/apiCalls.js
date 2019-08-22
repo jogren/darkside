@@ -1,7 +1,7 @@
  const apiCalls = {
   cleanPlanetData: (data) => {
     const planets = data.map(planet => {
-      var namesArray = planet.residents.map(person => {
+      const namesArray = planet.residents.map(person => {
         return fetch(person)
         .then(res => res.json())
         .then(data => data.name)
