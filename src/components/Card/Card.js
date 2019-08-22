@@ -5,8 +5,10 @@ import './Card.css'
 const Card = (props) => {
   let newCard;
   if(props.planet) {
-    var { name, terrain, climate, population, residents } = props.planet;
-    // console.log(props.planet.residents[0])
+    const { name, terrain, climate, population, residents } = props.planet;
+    const residentNames = residents.map(resident => {
+      return <li>{resident}</li>
+    })
 
     newCard = (
       <Fragment>
@@ -14,7 +16,7 @@ const Card = (props) => {
       <p>{terrain}</p>
       <p>{climate}</p>
       <p>{population}</p>
-      <p>{residents[0]}</p>
+      <ul>{residentNames}</ul>
       </Fragment>
     )
   }
