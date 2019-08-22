@@ -1,3 +1,11 @@
+@font-face {font-family: "STARWARS";
+  src: url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.eot");
+  src: url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.svg#STARWARS") format("svg");
+}
+
 * {
   margin: 0;
 }
@@ -5,11 +13,12 @@
 main {
   display: grid;
   grid-template-columns: 1fr 4fr;
-	grid-template-rows: 1fr 6fr;
+	grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "nav header"
     "nav output";
-    height: 100vh;
+  height: 100vh;
+  background-image: url('http://eskipaper.com/images/star-background-1.jpg');
 }
 
 .App-header {
@@ -17,5 +26,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+}
+
+h1 {
+  font-size: 85px;
+  font-family: 'STARWARS';
+  color: yellow;
+}
+
+h1:hover {
+  transform: scale(1.2) perspective(100px);
+  transition: all 0.5s ease;
 }
