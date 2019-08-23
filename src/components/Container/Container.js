@@ -5,24 +5,23 @@ import './Container.css';
 
 const Container = ({ data, type }) => {
   const dataCards = data.map((card, index) => {
-    console.log(card)
     if(type === 'planets') {
       return (
-        <Link exact to={`/${type}/${index}`}>
+        <Link to={`/${type}/${card.name.replace(/\s/g, '')}`} className="link">
           <Card planets={card} key={index} />
         </Link>
       )
     }
     if(type === 'people') {
       return (
-        <Link exact to={`/${type}/${index}`}>
+        <Link to={`/${type}/${card.name.replace(/\s/g, '')}`} className="link">
           <Card people={card} key={index} />
         </Link>
       )
     }
     if(type === 'vehicles') {
       return (
-        <Link exact to={`/${type}/${index}`}>
+        <Link to={`/${type}/${card.name.replace(/\s/g, '')}`} className="link">
           <Card vehicles={card} key={index} />
         </Link>
       )
