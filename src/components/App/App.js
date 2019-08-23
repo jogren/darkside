@@ -56,9 +56,9 @@ class App extends Component {
         </header>
         <Nav />
         <Route exact path='/' render={() => <Landing film={crawl}/> }/>
-        <Route exact path='/planets' render={() => <Container data={planets} type="planets" />} />
-        <Route exact path='/people' render={() => <Container data={people} type="people" />} />
-        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" />} />
+        <Route exact path='/planets' render={() => <Container data={planets} />} />
+        <Route exact path='/people' render={() => <Container data={people} />} />
+        <Route exact path='/vehicles' render={() => <Container data={vehicles} />} />
       {/* { !!planets.length && !isLoading && <Container data={planets} type="planets"/> } */}
       {/* { !!people.length && !isLoading && <Container data={people} type="people" /> } */}
       {/* { !!vehicles.length && !isLoading && <Container data={vehicles} type="vehicles"/> } */}

@@ -2,17 +2,9 @@ import React from 'react';
 import Card from '../Card/Card'
 import './Container.css';
 
-const Container = ({ data, type }) => {
+const Container = ({ data }) => {
   const dataCards = data.map((card, index) => {
-    if(type === 'planets') {
-      return <Card planets={card} key={index}/>
-    }
-    if(type === 'people') {
-      return <Card people={card} key={index}/>
-    }
-    if(type === 'vehicles') {
-      return <Card vehicles={card} key={index}/>
-    }
+     return <Card className='Card-section 'data={card} key={index}/>
   })
   return (
     <output>
