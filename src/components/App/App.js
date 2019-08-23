@@ -24,9 +24,7 @@ class App extends Component {
     fetch(`https://swapi.co/api/films/${randomNumber}`)
       .then(res => res.json())
       .then(data => this.setState({ crawl: { title: data.title, body: data.opening_crawl } }))
-
-      // .then(data => console.log(data))
-      // .then(data => this.setState({crawl: data.opening_crawl}))
+  
 
     fetch('https://swapi.co/api/planets/')
       .then(res => res.json())

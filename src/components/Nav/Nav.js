@@ -27,6 +27,7 @@ const Nav = () => {
       <NavLink to='/favorites' style={{ textDecoration: 'none' }}>
       <div className="Nav_div Nav-favorites">
         <p className="Nav_p">Favorites</p>
+        <p className="favorite-counter">0</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Linecons_big-star.svg/1024px-Linecons_big-star.svg.png" />
       </div>
       </NavLink>
