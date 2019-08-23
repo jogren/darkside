@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 import Container from '../Container/Container';
 import Landing from '../Landing/Landing';
+import CardDetails from '../CardDetails/CardDetails';
 import apiCalls from '../Util/apiCalls';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
@@ -59,6 +60,19 @@ class App extends Component {
         <Route exact path='/planets' render={() => <Container data={planets} type="planets" />} />
         <Route exact path='/people' render={() => <Container data={people} type="people" />} />
         <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" />} />
+        <Route path='/planets/:id' render={({ match }) => {
+          let targetPlanet = this.state.planets.find(planet => planet.id == match.params.id);
+          console.log(targetPlanet)
+          return <CardDetails {...targetPlanet} />
+        }} />
+        <Route path='/people/:id' render={({ match }) => {
+          let targetPerson = this.state.people.find(person => person.id == match.params.id);
+          return <CardDetails {...targetPerson} />
+        }} />
+        <Route path='/vehicles/:id' render={({ match }) => {
+          let targetVehicle = this.state.vehicles.find(vehicle => vehicle.id == match.params.id);
+          return <CardDetails {...targetVehicle} />
+        }} />
       {/* { !!planets.length && !isLoading && <Container data={planets} type="planets"/> } */}
       {/* { !!people.length && !isLoading && <Container data={people} type="people" /> } */}
       {/* { !!vehicles.length && !isLoading && <Container data={vehicles} type="vehicles"/> } */}
