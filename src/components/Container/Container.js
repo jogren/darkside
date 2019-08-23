@@ -3,8 +3,6 @@ import Card from '../Card/Card'
 import './Container.css';
 
 const Container = ({ data, type }) => {
-  console.log('data', data)
-  console.log(typeof type)
   const dataCards = data.map((card, index) => {
     if(type === 'planets') {
       return <Card planets={card} key={index}/>

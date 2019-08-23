@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 import Container from '../Container/Container';
-import './App.css';
+import Landing from '../Landing/Landing';
 import apiCalls from '../Util/apiCalls';
 import { Route, Link } from 'react-router-dom';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -13,16 +14,19 @@ class App extends Component {
       people: [],
       vehicles: [],
       favorites: [],
-      crawl: '',
+      crawl: {},
       isLoading: true
     }
   }
 
   componentDidMount() {
-    // let randomNumber = Math.floor((Math.random() * 7) + 1)
-    // fetch(`https://swapi.co/api/films/${randomNumber}`)
-    //   .then(res => res.json())
-    //   .then(data => this.setState({crawl: data.opening_crawl}))
+    let randomNumber = Math.floor((Math.random() * 7) + 1)
+    fetch(`https://swapi.co/api/films/${randomNumber}`)
+      .then(res => res.json())
+      .then(data => this.setState({ crawl: { title: data.title, body: data.opening_crawl } }))
+
+      // .then(data => console.log(data))
+      // .then(data => this.setState({crawl: data.opening_crawl}))
 
     fetch('https://swapi.co/api/planets/')
       .then(res => res.json())
@@ -44,16 +48,16 @@ class App extends Component {
     }
     
     render() {
-      // console.log(this.state.planets)
       const { planets, people, vehicles, favorites, crawl, isLoading } = this.state;
       return (
         <main className="App-main">
         <header className="App-header">
-          <Link exact to='/'>
-          <h1>LightSide</h1>
+          <Link exact to='/' style={{ textDecoration: 'none' }}>
+            <h1>LightSide</h1>
           </Link> 
         </header>
         <Nav />
+        <Route exact path='/' render={() => <Landing film={crawl}/> }/>
         <Route exact path='/planets' render={() => <Container data={planets} type="planets" />} />
         <Route exact path='/people' render={() => <Container data={people} type="people" />} />
         <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" />} />

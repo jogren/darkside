@@ -32,6 +32,8 @@ h1 {
   font-size: 85px;
   font-family: 'STARWARS';
   color: yellow;
+  text-decoration: underline;
+  text-decoration-color: yellow;
 }
 
 h1:hover {

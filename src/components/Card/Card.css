@@ -1,5 +1,21 @@
-.Card {
+.Card_section {
   box-sizing: border-box;
   border: 3px solid black;
   padding: 10px;
+  background: lightblue;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
+.Card_section:hover{ 
+  animation: Card_section 1s;
+  animation-timing-function: linear;   
+}
+
+@keyframes Card_section {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
 }

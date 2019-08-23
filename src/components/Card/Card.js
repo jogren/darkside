@@ -44,7 +44,7 @@ const Card = (props) => {
   }
 
   return (
-    <section className='Card'>
+    <section className='Card_section'>
     {newCard}
     </section>
   )
