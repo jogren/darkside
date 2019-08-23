@@ -50,7 +50,7 @@ class App extends Component {
       return (
         <main className="App-main">
         <header className="App-header">
-          <Link exact to='/' style={{ textDecoration: 'none' }}>
+          <Link to='/' style={{ textDecoration: 'none' }}>
             <h1>LightSide</h1>
           </Link> 
         </header>
