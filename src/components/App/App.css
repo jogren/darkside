@@ -18,7 +18,7 @@ main {
     "nav header"
     "nav output";
   height: 100vh;
-  background-image: url('http://eskipaper.com/images/star-background-1.jpg');
+  background-image: url('../../images/star-background.jpg');
 }
 
 .App-header {
