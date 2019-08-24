@@ -10,7 +10,9 @@
   align-items: center;
   height: 100%;
 }
-
+.favorite {
+  background: yellow;
+}
 .Card_section:hover{ 
   animation: Card_section 1s;
   animation-timing-function: linear;   

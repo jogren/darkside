@@ -10,7 +10,9 @@
   justify-content: center;
   border-radius: 10px;
 }
-
+.favorite {
+  background: yellow;
+}
 .back-btn {
   text-decoration: none;
   color: black;

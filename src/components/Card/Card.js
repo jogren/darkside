@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ data, type, toggleFavorite }) => {
+const Card = ({ data, type, toggleFavorite, favorites }) => {
+  const isFavorite = favorites.map(favorite => favorite.name).includes(data.name) ? 'favorite' : null; 
   const { name, homeworld, terrain, climate, species, homePopulation, language, 
           model, vehicleClass, passengers, residents, population } = data;
   let residentNames = null;
@@ -12,7 +13,7 @@ const Card = ({ data, type, toggleFavorite }) => {
     })
   }
   return (
-    <article className='Card_section'>
+    <article className={`Card_section ${isFavorite}`}>
       <Link to={`/${type}/${name.replace(/\s/g, '').replace("/", "")}`} className="link">
         { name && <h3>{name}</h3> }
       </Link>

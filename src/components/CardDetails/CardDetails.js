@@ -2,9 +2,8 @@ import React from 'react';
 import './CardDetails.css';
 import { Link } from 'react-router-dom';
 
-const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulation, type, residents, population, language, model, vehicleClass, passengers }) => {
-  console.log(type)
-
+const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulation, type, residents, population, language, model, vehicleClass, passengers, favorites }) => {
+  const isFavorite = favorites.map(favorite => favorite.name).includes(name) ? 'favorite' : null; 
   let residentNames = null;
   if (residents) {
     residentNames = residents.map((resident, index) => {
@@ -13,7 +12,7 @@ const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulatio
   }
   
   return (
-    <div className="CardDetails-div">
+    <div className={`CardDetails-div ${isFavorite}`}>
       <Link to={`/${type}`} className='back-btn'>◀ back</Link>
       <h2>{name}</h2>
       {homeworld && <p>{homeworld}</p>}

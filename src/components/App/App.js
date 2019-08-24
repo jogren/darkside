@@ -75,25 +75,25 @@ class App extends Component {
         </header>
         <Nav favorites={favorites}/>
         <Route exact path='/' render={() => <Landing film={crawl}/> }/>
-        <Route exact path='/planets' render={() => <Container data={planets} type="planets" toggleFavorite={this.toggleFavorite} />} />
-        <Route exact path='/people' render={() => <Container data={people} type="people" toggleFavorite={this.toggleFavorite} />} />
-        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" toggleFavorite={this.toggleFavorite} />} />
-        <Route exact path='/favorites' render={() => <Container data={favorites} type="favorites" toggleFavorite={this.toggleFavorite} />} />
+        <Route exact path='/planets' render={() => <Container data={planets} type="planets" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
+        <Route exact path='/people' render={() => <Container data={people} type="people" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
+        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
+        <Route exact path='/favorites' render={() => <Container data={favorites} type="favorites" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
         <Route path='/planets/:name' render={({ match }) => {
             let targetPlanet = this.state.planets.find(planet => planet.name.replace(/\s/g, '') == match.params.name);
             return <CardDetails {...targetPlanet} type="planets" />
         }} />
         <Route path='/people/:name' render={({ match }) => {
             let targetPerson = this.state.people.find(person => person.name.replace(/\s/g, '') == match.params.name);
-            return <CardDetails {...targetPerson} type="people" />
+            return <CardDetails {...targetPerson} type="people" favorites={favorites}/>
         }} />
         <Route path='/vehicles/:name' render={({ match }) => {
             let targetVehicle = this.state.vehicles.find(vehicle => vehicle.name.replace(/\s/g, '').replace("/", "") == match.params.name);
-            return <CardDetails {...targetVehicle} type="vehicles" />
+            return <CardDetails {...targetVehicle} type="vehicles" favorites={favorites}/>
         }} />
         <Route path='/favorites/:name' render={({ match }) => {
             let targetFavorite = this.state.favorites.find(favorite => favorite.name.replace(/\s/g, '').replace("/", "") == match.params.name);
-            return <CardDetails {...targetFavorite} type="favorites" />
+            return <CardDetails {...targetFavorite} type="favorites" favorites={favorites}/>
         }} />
       </main>
     );
