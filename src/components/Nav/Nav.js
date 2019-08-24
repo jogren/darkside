@@ -3,7 +3,6 @@ import './Nav.css';
 import { NavLink } from 'react-router-dom'
 
 const Nav = ({favorites}) => {
-
   return (
     <nav>
       <NavLink to='/people' className="link">

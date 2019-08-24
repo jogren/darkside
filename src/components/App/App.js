@@ -27,6 +27,7 @@ class App extends Component {
 
   addFavorite = (card) => {
     const { favorites } = this.state;
+    this.saveToStorage([...favorites, card])
     this.setState({ favorites: [...favorites, card]});
   }
 
@@ -34,7 +35,11 @@ class App extends Component {
     const { favorites } = this.state;
     const filteredFavorites = favorites.filter(favorite => favorite.name !== card.name)
     this.setState({ favorites: filteredFavorites});
+    this.saveToStorage(filteredFavorites)
+  }
 
+  saveToStorage = (favoritesArray) => {
+    localStorage.setItem('favorites', JSON.stringify(favoritesArray));
   }
 
   componentDidMount() {
@@ -60,13 +65,18 @@ class App extends Component {
       .then(res => res.json())
       .then(data => apiCalls.cleanVehicles(data.results))
       .then(vehicles => this.setState({ vehicles }))
-  
+
+    if (JSON.parse(localStorage.getItem('favorites')) === null) {
+      return;
+    } else {
+      this.state.favorites = JSON.parse(localStorage.getItem('favorites'))
     }
+  }
     
-    render() {
-      const { planets, people, vehicles, favorites, crawl, isLoading } = this.state;
-      return (
-        <main className="App-main">
+  render() {
+    const { planets, people, vehicles, favorites, crawl, isLoading } = this.state;
+    return (
+      <main className="App-main">
         <header className="App-header">
           <Link to='/' className="link">
             <h1>LightSide</h1>
