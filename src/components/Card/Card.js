@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ data, type }) => {
+const Card = ({ data, type, toggleFavorite }) => {
   const { name, homeworld, terrain, climate, species, homePopulation, language, 
           model, vehicleClass, passengers, residents, population } = data;
   let residentNames = null;
@@ -27,6 +27,9 @@ const Card = ({ data, type }) => {
         { model && <p>{model}</p> }
         { vehicleClass && <p>{vehicleClass}</p> }
         { passengers && <p>{passengers}</p> }
+        <button onClick={() => toggleFavorite(data)}>
+          Favorite
+        </button>
     </article>
   )
 }

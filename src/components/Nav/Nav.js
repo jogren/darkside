@@ -2,7 +2,7 @@ import React from 'react';
 import './Nav.css';
 import { NavLink } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = ({favorites}) => {
 
   return (
     <nav>
@@ -27,6 +27,7 @@ const Nav = () => {
       <NavLink to='/favorites' className="link">
       <div className="Nav_div Nav-favorites">
         <p className="Nav_p">Favorites</p>
+        <p className="favorite-counter">{favorites.length}</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Linecons_big-star.svg/1024px-Linecons_big-star.svg.png" />
       </div>
       </NavLink>
