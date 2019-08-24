@@ -8,14 +8,14 @@ const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulatio
   let residentNames = null;
   if (residents) {
     residentNames = residents.map((resident, index) => {
-      return <li key={index}>{resident}</li>
+      return <li key={index} className="CardDetails_li">{resident}</li>
     })
   }
   
   return (
     <div className={`CardDetails-div ${isFavorite}`}>
       <Link to={`/${type}`} className='back-btn'>◀ back</Link>
-      <h2>{name}</h2>
+      <h2 className="CardDetails_h2">{name}</h2>
       {!name && <p>404: No data found at this location!</p>}
       {homeworld && <p>Homeworld: {homeworld}</p>}
       {terrain && <p>Terrain: {terrain}</p>}
