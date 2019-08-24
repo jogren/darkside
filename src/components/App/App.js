@@ -64,7 +64,6 @@ class App extends Component {
     }
     
     render() {
-      console.log(this.state)
       const { planets, people, vehicles, favorites, crawl, isLoading } = this.state;
       return (
         <main className="App-main">
@@ -81,19 +80,19 @@ class App extends Component {
         <Route exact path='/favorites' render={() => <Container data={favorites} type="favorites" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
         <Route path='/planets/:name' render={({ match }) => {
             let targetPlanet = this.state.planets.find(planet => planet.name.replace(/\s/g, '') == match.params.name);
-            return <CardDetails {...targetPlanet} type="planets" />
+            return <CardDetails {...targetPlanet} type="planets" favorites={favorites} />
         }} />
         <Route path='/people/:name' render={({ match }) => {
             let targetPerson = this.state.people.find(person => person.name.replace(/\s/g, '') == match.params.name);
-            return <CardDetails {...targetPerson} type="people" favorites={favorites}/>
+            return <CardDetails {...targetPerson} type="people" favorites={favorites} />
         }} />
         <Route path='/vehicles/:name' render={({ match }) => {
             let targetVehicle = this.state.vehicles.find(vehicle => vehicle.name.replace(/\s/g, '').replace("/", "") == match.params.name);
-            return <CardDetails {...targetVehicle} type="vehicles" favorites={favorites}/>
+            return <CardDetails {...targetVehicle} type="vehicles" favorites={favorites} />
         }} />
         <Route path='/favorites/:name' render={({ match }) => {
             let targetFavorite = this.state.favorites.find(favorite => favorite.name.replace(/\s/g, '').replace("/", "") == match.params.name);
-            return <CardDetails {...targetFavorite} type="favorites" favorites={favorites}/>
+            return <CardDetails {...targetFavorite} type="favorites" favorites={favorites} />
         }} />
       </main>
     );
