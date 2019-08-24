@@ -20,6 +20,23 @@ class App extends Component {
     }
   }
 
+  toggleFavorite = (card) => {
+    const { favorites } = this.state;
+    favorites.map(favorite => favorite.name).includes(card.name) ? this.removeFavorite(card) : this.addFavorite(card);
+  }
+
+  addFavorite = (card) => {
+    const { favorites } = this.state;
+    this.setState({ favorites: [...favorites, card]});
+  }
+
+  removeFavorite = (card) => {
+    const { favorites } = this.state;
+    const filteredFavorites = favorites.filter(favorite => favorite.name !== card.name)
+    this.setState({ favorites: filteredFavorites});
+
+  }
+
   componentDidMount() {
     let randomNumber = Math.floor((Math.random() * 7) + 1)
     fetch(`https://swapi.co/api/films/${randomNumber}`)
