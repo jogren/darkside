@@ -12,8 +12,8 @@ const Card = ({ data, type }) => {
     })
   }
   return (
-    <article className='Card-section'>
-      <Link to={`/${type}/${name.replace(/\s/g, '')}`} className="link">
+    <article className='Card_section'>
+      <Link to={`/${type}/${name.replace(/\s/g, '').replace("/", "")}`} className="link">
         { name && <h3>{name}</h3> }
       </Link>
         { homeworld && <p>{homeworld}</p> }

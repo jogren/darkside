@@ -62,7 +62,6 @@ class App extends Component {
         <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" />} />
         <Route path='/planets/:name' render={({ match }) => {
             let targetPlanet = this.state.planets.find(planet => planet.name.replace(/\s/g, '') == match.params.name);
-          console.log(targetPlanet)
             return <CardDetails {...targetPlanet} type="planets" />
         }} />
         <Route path='/people/:name' render={({ match }) => {
@@ -70,7 +69,7 @@ class App extends Component {
             return <CardDetails {...targetPerson} type="people" />
         }} />
         <Route path='/vehicles/:name' render={({ match }) => {
-            let targetVehicle = this.state.vehicles.find(vehicle => vehicle.name.replace(/\s/g, '') == match.params.name);
+            let targetVehicle = this.state.vehicles.find(vehicle => vehicle.name.replace(/\s/g, '').replace("/", "") == match.params.name);
             return <CardDetails {...targetVehicle} type="vehicles" />
         }} />
       </main>
