@@ -13,7 +13,7 @@ describe('Route', () => {
     </MemoryRouter>
     );
     expect(component.find(Landing)).toHaveLength(1);
-  })
+  });
 
   it('should show Container component for /planets router)', () => {
     const component = mount(<MemoryRouter initialEntries={['/planets']} >
@@ -37,5 +37,27 @@ describe('Route', () => {
     </MemoryRouter>
     );
     expect(component.find(Container)).toHaveLength(1);
-  })
-})
+  });
+  it('should update state when toggleFavorite is called once', () => {
+    const wrapper = shallow(<App />);
+    const mockFavorite = {
+      name: 'Djavan'
+    };
+    const expected = [mockFavorite];
+    
+    wrapper.instance().toggleFavorite(mockFavorite);
+    expect(wrapper.state('favorites')).toEqual(expected)
+  });
+  it('should update state when toggleFavorite is called twice', () => {
+    const wrapper = shallow(<App />);
+    const mockFavorite = {
+      name: 'Djavan'
+    };
+    const expected = [mockFavorite];
+    
+    wrapper.instance().toggleFavorite(mockFavorite);
+    wrapper.instance().toggleFavorite(mockFavorite);
+  
+    expect(wrapper.state('favorites')).toEqual([])
+  });
+});
