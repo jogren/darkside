@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 import Container from '../Container/Container';
 import Landing from '../Landing/Landing';
+import CardDetails from '../CardDetails/CardDetails';
 import apiCalls from '../Util/apiCalls';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
@@ -50,18 +51,28 @@ class App extends Component {
       return (
         <main className="App-main">
         <header className="App-header">
-          <Link to='/' style={{ textDecoration: 'none' }}>
+          <Link to='/' className="link">
             <h1>LightSide</h1>
           </Link> 
         </header>
         <Nav />
         <Route exact path='/' render={() => <Landing film={crawl}/> }/>
-        <Route exact path='/planets' render={() => <Container data={planets} />} />
-        <Route exact path='/people' render={() => <Container data={people} />} />
-        <Route exact path='/vehicles' render={() => <Container data={vehicles} />} />
-      {/* { !!planets.length && !isLoading && <Container data={planets} type="planets"/> } */}
-      {/* { !!people.length && !isLoading && <Container data={people} type="people" /> } */}
-      {/* { !!vehicles.length && !isLoading && <Container data={vehicles} type="vehicles"/> } */}
+        <Route exact path='/planets' render={() => <Container data={planets} type="planets" />} />
+        <Route exact path='/people' render={() => <Container data={people} type="people" />} />
+        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" />} />
+        <Route path='/planets/:name' render={({ match }) => {
+            let targetPlanet = this.state.planets.find(planet => planet.name.replace(/\s/g, '') == match.params.name);
+          console.log(targetPlanet)
+            return <CardDetails {...targetPlanet} type="planets" />
+        }} />
+        <Route path='/people/:name' render={({ match }) => {
+            let targetPerson = this.state.people.find(person => person.name.replace(/\s/g, '') == match.params.name);
+            return <CardDetails {...targetPerson} type="people" />
+        }} />
+        <Route path='/vehicles/:name' render={({ match }) => {
+            let targetVehicle = this.state.vehicles.find(vehicle => vehicle.name.replace(/\s/g, '') == match.params.name);
+            return <CardDetails {...targetVehicle} type="vehicles" />
+        }} />
       </main>
     );
   }

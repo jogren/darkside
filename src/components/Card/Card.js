@@ -1,9 +1,8 @@
 import React from 'react';
-import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ data }) => {
-  console.log(data)
+const Card = ({ data, type }) => {
   const { name, homeworld, terrain, climate, species, homePopulation, language, 
           model, vehicleClass, passengers, residents, population } = data;
   let residentNames = null;
@@ -14,7 +13,9 @@ const Card = ({ data }) => {
   }
   return (
     <article className='Card-section'>
+      <Link to={`/${type}/${name.replace(/\s/g, '')}`} className="link">
         { name && <h3>{name}</h3> }
+      </Link>
         { homeworld && <p>{homeworld}</p> }
         { terrain && <p>{terrain}</p> }
         { climate && <p>{climate}</p> }
