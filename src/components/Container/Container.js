@@ -8,6 +8,7 @@ const Container = ({ data, type, toggleFavorite, favorites }) => {
   })
   return (
     <output>
+      {type === 'favorites' && !favorites.length && <p>Click a card to favorite</p>}
       {dataCards}
     </output>
   )
