@@ -22,8 +22,7 @@ main {
 }
 
 .dark-theme {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/star-background.jpg');
-
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../../images/star-background.jpg');
 }
 
 .App-header {
@@ -36,6 +35,9 @@ main {
 
 .light-sabers {
   height: 50px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
 
 .light-sabers:hover{ 
@@ -49,6 +51,13 @@ h1 {
   color: yellow;
   text-decoration: underline;
   text-decoration-color: yellow;
+  position: relative;
+  background: none;
+}
+
+.dark {
+  color: red;
+  text-decoration-color: red;
 }
 
 h1:hover {

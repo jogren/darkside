@@ -82,13 +82,13 @@ class App extends Component {
     
   render() {
     const { planets, people, vehicles, favorites, crawl, isLoading, theme } = this.state;
-    const isDark = theme === 'dark' ? 'dark-theme' : '';
+    const isDark = theme === 'dark' ? 'dark-theme' : null;
     return (
       <main className={`App-main ${isDark}`}>
         <header className="App-header">
           <Link to='/' className="link">
             { theme === 'light' && <h1>LightSide</h1> }
-            { theme === 'dark'  && <h1>DarkSide</h1> }
+            { theme === 'dark'  && <h1 className="dark">DarkSide</h1> }
           </Link> 
           <img 
           className="light-sabers"
@@ -97,7 +97,7 @@ class App extends Component {
           onClick={this.toggleTheme}
           />
         </header>
-        <Nav favorites={favorites}/>
+        <Nav favorites={favorites} theme={theme} />
         <Route exact path='/' render={() => <Landing film={crawl}/> }/>
         <Route exact path='/planets' render={() => <Container data={planets} type="planets" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
         <Route exact path='/people' render={() => <Container data={people} type="people" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
