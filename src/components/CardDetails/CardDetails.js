@@ -27,7 +27,7 @@ const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulatio
       {model && <p>Model: {model}</p>}
       {vehicleClass && <p>Class: {vehicleClass}</p>}
       {passengers && <p>Number of Passengers: {passengers}</p>}
-      {residentNames && <div><p>Residence: </p><ul>{residentNames}</ul></div>}
+      {residentNames && <div><p>Residents: </p><ul>{residentNames}</ul></div>}
     </div>
   )
 }

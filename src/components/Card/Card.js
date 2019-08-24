@@ -5,13 +5,14 @@ import './Card.css';
 const Card = ({ data, type, toggleFavorite, favorites }) => {
   const isFavorite = favorites.map(favorite => favorite.name).includes(data.name) ? 'favorite' : null; 
   const { name, homeworld, terrain, climate, species, homePopulation, language, 
-          model, vehicleClass, passengers, residents, population } = data;
-  let residentNames = null;
-  if(residents) {
-    residentNames = residents.map((resident, index) => {
-      return <li key={index}>{resident}</li>
-    })
-  }
+    model, vehicleClass, passengers, residents, population } = data;
+    let residentNames = null;
+    if(residents) {
+      residentNames = residents.map((resident, index) => {
+        return <li key={index}>{resident}</li>
+      })
+    }
+  const starSrc = favorites.map(favorite => favorite.name).includes(data.name) ? 'https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-part-2/512/favourites_favorites_folder-512.png' : 'https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png';
   return (
     <article className={`Card_section ${isFavorite}`}>
       <Link to={`/${type}/${name.replace(/\s/g, '').replace("/", "")}`} className="link">
@@ -27,10 +28,11 @@ const Card = ({ data, type, toggleFavorite, favorites }) => {
         { model && <p>Model: {model}</p> }
         { vehicleClass && <p>Class: {vehicleClass}</p> }
         { passengers && <p>Number of Passengers: {passengers}</p> }
-        {residentNames && <div><p>Residence: </p><ul>{residentNames}</ul></div> }
-        <button onClick={() => toggleFavorite(data)}>
+        {residentNames && <div><p>Residents: </p><ul>{residentNames}</ul></div> }
+        <img src={starSrc} onClick={() => toggleFavorite(data)}/>
+        {/* <button onClick={() => toggleFavorite(data)}>
           Favorite
-        </button>
+        </button> */}
     </article>
   )
 }

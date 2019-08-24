@@ -60,6 +60,7 @@
     })
     return Promise.all(promises)
   },
+  
   cleanVehicles: (data) => {
     return data.map(vehicle => {
       return {

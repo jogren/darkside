@@ -32,6 +32,11 @@ img {
   background: yellow;
 }
 
+.Nav_div:hover .favorite-counter {
+  color: black;
+  text-shadow: none;
+}
+
 .Nav_p {
   font-size: 16px;
   font-weight: bold;
