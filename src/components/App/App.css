@@ -21,11 +21,26 @@ main {
   background-image: url('../../images/star-background.jpg');
 }
 
+.dark-theme {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/star-background.jpg');
+
+}
+
 .App-header {
   grid-area: header;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.light-sabers {
+  height: 50px;
+}
+
+.light-sabers:hover{ 
+  animation: saber 1s;
+  animation-timing-function: linear;   
 }
 
 h1 {
@@ -39,4 +54,12 @@ h1 {
 h1:hover {
   transform: scale(1.2) perspective(100px);
   transition: all 0.5s ease;
+}
+
+@keyframes saber {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
 }

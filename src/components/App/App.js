@@ -16,7 +16,8 @@ class App extends Component {
       vehicles: [],
       favorites: [],
       crawl: {},
-      isLoading: true
+      isLoading: true,
+      theme: 'light'
     }
   }
 
@@ -27,7 +28,7 @@ class App extends Component {
 
   addFavorite = (card) => {
     const { favorites } = this.state;
-    this.saveToStorage([...favorites, card])
+    this.saveToStorage([...favorites, card]);
     this.setState({ favorites: [...favorites, card]});
   }
 
@@ -35,11 +36,17 @@ class App extends Component {
     const { favorites } = this.state;
     const filteredFavorites = favorites.filter(favorite => favorite.name !== card.name)
     this.setState({ favorites: filteredFavorites});
-    this.saveToStorage(filteredFavorites)
+    this.saveToStorage(filteredFavorites);
   }
 
   saveToStorage = (favoritesArray) => {
     localStorage.setItem('favorites', JSON.stringify(favoritesArray));
+  }
+
+  toggleTheme = () => {
+    this.setState(({ theme }) => ({
+      theme: theme === 'light' ? 'dark' : 'light'
+    }))
   }
 
   componentDidMount() {
@@ -74,13 +81,21 @@ class App extends Component {
   }
     
   render() {
-    const { planets, people, vehicles, favorites, crawl, isLoading } = this.state;
+    const { planets, people, vehicles, favorites, crawl, isLoading, theme } = this.state;
+    const isDark = theme === 'dark' ? 'dark-theme' : '';
     return (
-      <main className="App-main">
+      <main className={`App-main ${isDark}`}>
         <header className="App-header">
           <Link to='/' className="link">
-            <h1>LightSide</h1>
+            { theme === 'light' && <h1>LightSide</h1> }
+            { theme === 'dark'  && <h1>DarkSide</h1> }
           </Link> 
+          <img 
+          className="light-sabers"
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Dueling_lightsabers.svg/750px-Dueling_lightsabers.svg.png' 
+          alt='Dueling Lightsabers theme picker' 
+          onClick={this.toggleTheme}
+          />
         </header>
         <Nav favorites={favorites}/>
         <Route exact path='/' render={() => <Landing film={crawl}/> }/>
