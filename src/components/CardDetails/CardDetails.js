@@ -15,6 +15,7 @@ const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulatio
     <div className={`CardDetails-div ${isFavorite}`}>
       <Link to={`/${type}`} className='back-btn'>◀ back</Link>
       <h2>{name}</h2>
+      {!name && <p>404: No data found at this location!</p>}
       {homeworld && <p>{homeworld}</p>}
       {terrain && <p>{terrain}</p>}
       {climate && <p>{climate}</p>}
