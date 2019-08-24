@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  position: relative;
 }
 .favorite {
   background: yellow;
@@ -17,6 +18,9 @@
   text-decoration: none;
   color: black;
   font-size: 24px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .back-btn:hover {

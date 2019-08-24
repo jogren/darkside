@@ -3,6 +3,13 @@ output {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  padding: 5px;
+}
+
+.p_add-favorite {
+  font-size: 42px;
+  font-family: 'STARWARS';
+  color: #FFF;
 }
 
 .link {

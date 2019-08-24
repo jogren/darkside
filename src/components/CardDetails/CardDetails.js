@@ -17,17 +17,17 @@ const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulatio
       <Link to={`/${type}`} className='back-btn'>◀ back</Link>
       <h2>{name}</h2>
       {!name && <p>404: No data found at this location!</p>}
-      {homeworld && <p>{homeworld}</p>}
-      {terrain && <p>{terrain}</p>}
-      {climate && <p>{climate}</p>}
-      {homePopulation && <p>{homePopulation}</p>}
-      {species && <p>{species}</p>}
-      {population && <p>{population}</p>}
-      {language && <p>{language}</p>}
-      {model && <p>{model}</p>}
-      {vehicleClass && <p>{vehicleClass}</p>}
-      {passengers && <p>{passengers}</p>}
-      {residentNames && <ul>{residentNames}</ul>}
+      {homeworld && <p>Homeworld: {homeworld}</p>}
+      {terrain && <p>Terrain: {terrain}</p>}
+      {climate && <p>Climate: {climate}</p>}
+      {homePopulation && <p>Population: {homePopulation}</p>}
+      {species && <p>Species: {species}</p>}
+      {population && <p>Population: {population}</p>}
+      {language && <p>Language: {language}</p>}
+      {model && <p>Model: {model}</p>}
+      {vehicleClass && <p>Class: {vehicleClass}</p>}
+      {passengers && <p>Number of Passengers: {passengers}</p>}
+      {residentNames && <div><p>Residence: </p><ul>{residentNames}</ul></div>}
     </div>
   )
 }

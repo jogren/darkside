@@ -15,19 +15,19 @@ const Card = ({ data, type, toggleFavorite, favorites }) => {
   return (
     <article className={`Card_section ${isFavorite}`}>
       <Link to={`/${type}/${name.replace(/\s/g, '').replace("/", "")}`} className="link">
-        { name && <h3>{name}</h3> }
+        { name && <h3 className="Card__article-h3">{name}</h3> }
       </Link>
-        { homeworld && <p>{homeworld}</p> }
-        { terrain && <p>{terrain}</p> }
-        { climate && <p>{climate}</p> }
-        { homePopulation && <p>{homePopulation}</p> }
-        { residentNames && <ul>{residentNames}</ul> }
-        { species && <p>{species}</p> }
-        { population && <p>{population}</p> }
-        { language && <p>{language}</p> }
-        { model && <p>{model}</p> }
-        { vehicleClass && <p>{vehicleClass}</p> }
-        { passengers && <p>{passengers}</p> }
+        { homeworld && <p>Home: {homeworld}</p> }
+        { terrain && <p>Terrain: {terrain}</p> }
+        { climate && <p>Climate: {climate}</p> }
+        { homePopulation && <p>Population: {homePopulation}</p> }
+        { species && <p>Species: {species}</p> }
+        { population && <p>Population: {population}</p> }
+        { language && <p>Language: {language}</p> }
+        { model && <p>Model: {model}</p> }
+        { vehicleClass && <p>Class: {vehicleClass}</p> }
+        { passengers && <p>Number of Passengers: {passengers}</p> }
+        {residentNames && <div><p>Residence: </p><ul>{residentNames}</ul></div> }
         <button onClick={() => toggleFavorite(data)}>
           Favorite
         </button>
