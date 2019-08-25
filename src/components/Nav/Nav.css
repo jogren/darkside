@@ -20,7 +20,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid black;
+  border: 3px outset black;
   border-radius: 50%;
   padding: 10px;
   background: lightblue;
@@ -69,8 +69,8 @@ img {
 }
 
 .dark-nav {
-  background: #ccc7c8;
-  color: #ccc7c8;
+  background: #dddddd;
+  color: #dddddd;
 }
 .dark-nav span {
   color:black;

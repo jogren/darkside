@@ -45,3 +45,13 @@ article img {
   75% { transform: rotate(-2deg); }
   100% { transform: rotate(0deg); }
 }
+
+.dark-card {
+  background: #dddddd;
+}
+
+.dark-favorite {
+  background: #fe1a2d;
+  color: #ffffff;
+  font-weight: bold;
+}
