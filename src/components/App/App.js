@@ -34,7 +34,7 @@ class App extends Component {
 
   removeFavorite = (card) => {
     const { favorites } = this.state;
-    const filteredFavorites = favorites.filter(favorite => favorite.name !== card.name)
+    const filteredFavorites = favorites.filter(favorite => favorite.name !== card.name);
     this.setState({ favorites: filteredFavorites});
     this.saveToStorage(filteredFavorites);
   }
@@ -76,13 +76,14 @@ class App extends Component {
     if (JSON.parse(localStorage.getItem('favorites')) === null) {
       return;
     } else {
-      this.state.favorites = JSON.parse(localStorage.getItem('favorites'))
+      const favorites = JSON.parse(localStorage.getItem('favorites'));
+      this.setState({ favorites });
     }
   }
     
   render() {
     const { planets, people, vehicles, favorites, crawl, isLoading, theme } = this.state;
-    const isDark = theme === 'dark' ? 'dark-theme' : null;
+    const isDark = theme === 'dark' ? 'dark-theme' : '';
     return (
       <main className={`App-main ${isDark}`}>
         <header className="App-header">
@@ -99,25 +100,25 @@ class App extends Component {
         </header>
         <Nav favorites={favorites} theme={theme} />
         <Route exact path='/' render={() => <Landing film={crawl}/> }/>
-        <Route exact path='/planets' render={() => <Container data={planets} type="planets" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
-        <Route exact path='/people' render={() => <Container data={people} type="people" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
-        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
-        <Route exact path='/favorites' render={() => <Container data={favorites} type="favorites" toggleFavorite={this.toggleFavorite} favorites={favorites} />} />
+        <Route exact path='/planets' render={() => <Container data={planets} type="planets" toggleFavorite={this.toggleFavorite} favorites={favorites} theme={theme} />} />
+        <Route exact path='/people' render={() => <Container data={people} type="people" toggleFavorite={this.toggleFavorite} favorites={favorites} theme={theme} />} />
+        <Route exact path='/vehicles' render={() => <Container data={vehicles} type="vehicles" toggleFavorite={this.toggleFavorite} favorites={favorites} theme={theme} />} />
+        <Route exact path='/favorites' render={() => <Container data={favorites} type="favorites" toggleFavorite={this.toggleFavorite} favorites={favorites} theme={theme} />} />
         <Route path='/planets/:name' render={({ match }) => {
             let targetPlanet = this.state.planets.find(planet => planet.name.replace(/\s/g, '') == match.params.name);
-            return <CardDetails {...targetPlanet} type="planets" favorites={favorites} />
+            return <CardDetails {...targetPlanet} type="planets" favorites={favorites} theme={theme} />
         }} />
         <Route path='/people/:name' render={({ match }) => {
             let targetPerson = this.state.people.find(person => person.name.replace(/\s/g, '') == match.params.name);
-            return <CardDetails {...targetPerson} type="people" favorites={favorites} />
+            return <CardDetails {...targetPerson} type="people" favorites={favorites} theme={theme} />
         }} />
         <Route path='/vehicles/:name' render={({ match }) => {
             let targetVehicle = this.state.vehicles.find(vehicle => vehicle.name.replace(/\s/g, '').replace("/", "") == match.params.name);
-            return <CardDetails {...targetVehicle} type="vehicles" favorites={favorites} />
+            return <CardDetails {...targetVehicle} type="vehicles" favorites={favorites} theme={theme} />
         }} />
         <Route path='/favorites/:name' render={({ match }) => {
             let targetFavorite = this.state.favorites.find(favorite => favorite.name.replace(/\s/g, '').replace("/", "") == match.params.name);
-            return <CardDetails {...targetFavorite} type="favorites" favorites={favorites} />
+            return <CardDetails {...targetFavorite} type="favorites" favorites={favorites} theme={theme} />
         }} />
       </main>
     );

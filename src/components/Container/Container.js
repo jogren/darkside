@@ -2,9 +2,9 @@ import React from 'react';
 import Card from '../Card/Card'
 import './Container.css';
 
-const Container = ({ data, type, toggleFavorite, favorites }) => {
+const Container = ({ data, type, toggleFavorite, favorites, theme }) => {
   const dataCards = data.map((card, index) => {
-     return <Card className='Card-section 'data={card} type={type} key={index} toggleFavorite={toggleFavorite} favorites={favorites} />
+     return <Card className='Card-section' data={card} type={type} key={index} toggleFavorite={toggleFavorite} favorites={favorites} theme={theme} />
   })
   return (
     <output>
