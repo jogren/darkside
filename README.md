@@ -14,9 +14,9 @@ This website was build using the create-react-app starter kit. Dependencies incl
 ![Splash screen dark ](./public/darkTheme1.png)
 ![All cards light](./public/lightTheme2.png)
 ![All cards dark](./public/darkTheme2.png)
-![Large card light](./public/lightTheme3)
-![Large card dark](./public/darkTheme3)
-![Favorites](./public/lightTheme5)
+![Large card light](./public/lightTheme3.png)
+![Large card dark](./public/darkTheme3.png)
+![Favorites](./public/lightTheme5.png)
 
 
 ## Built With
