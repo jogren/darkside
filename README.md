@@ -1,8 +1,9 @@
 # Darkside / SwapiBox 
 
-Darkside is one week project for Front End Engineering students at the Turing School of Software & Design. Students were tasked with consuming the Star Wars API (SWAPI) to display information about characters, vehicles, planets, and the films. 
+Darkside is one week project for Front End Engineering students at the Turing School of Software & Design. Students were tasked with consuming the Star Wars API (SWAPI) to display information about characters, vehicles, planets, and the films. The user is able to favorite any card on the screen, and their current list of favorites will persist after page relod, using the local storage API. 
 
-This website was build using the create-react-app starter kit. Dependencies include Jest/Enzyme for teting, and propTypes to check component types. We also utilized JavaScript ES6+ when creating all components. 
+This website was built using the create-react-app starter kit. Dependencies include Jest/Enzyme for teting, and propTypes to check component types. We also utilized JavaScript ES6+ when creating all components. 
+
 
 
 ## Authors:
@@ -20,6 +21,7 @@ This website was build using the create-react-app starter kit. Dependencies incl
 
 
 ## Built With
+- React
 - JavaScript (ES6+)
 - Webpack
 - Jest
