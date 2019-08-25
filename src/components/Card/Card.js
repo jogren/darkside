@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
   const isDark = theme === 'dark' ? 'dark-card' : '';
@@ -14,8 +15,6 @@ const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
       return <li key={index}>{resident}</li>
     });
   };
-  console.log(data)
-  const darkTitle = theme === 'dark' ? 'dark-title' : '';
   const starSrc = favorites.map(favorite => favorite.name).includes(data.name) ? 'https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-part-2/512/favourites_favorites_folder-512.png' : 'https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png';
   return (
     <article className={`Card_section ${isFavorite} ${isDark}`}>
@@ -33,9 +32,17 @@ const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
         { vehicleClass && <p>Class: {vehicleClass}</p> }
         { passengers && <p>Number of Passengers: {passengers}</p> }
         { residents && !!residents.length && <div><p>Residents: </p><ul>{residentNames}</ul></div> }
-        <img src={starSrc} onClick={() => toggleFavorite(data)}/>
+        <img src={starSrc} alt='icon denoting when the card is favorited' onClick={() => toggleFavorite(data)}/>
     </article>
   )
+}
+
+Card.propTypes = {
+  data: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  favorites: PropTypes.array.isRequired,
+  theme: PropTypes.string.isRequired
 }
 
 export default Card;

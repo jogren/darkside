@@ -2,6 +2,7 @@ import React from 'react';
 import Crawl from 'react-star-wars-crawl';
 import 'react-star-wars-crawl/lib/index.css'
 import './Landing.css';
+import PropTypes from 'prop-types';
 
 const Landing = ({ film }) => {
   return (
@@ -12,4 +13,7 @@ const Landing = ({ film }) => {
   );
 }
 
+Landing.propTypes = {
+  film: PropTypes.object.isRequired,
+}
 export default Landing;

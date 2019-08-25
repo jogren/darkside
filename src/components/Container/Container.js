@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card'
 import './Container.css';
+import PropTypes from 'prop-types';
 
 const Container = ({ data, type, toggleFavorite, favorites, theme }) => {
   const dataCards = data.map((card, index) => {
@@ -12,6 +13,14 @@ const Container = ({ data, type, toggleFavorite, favorites, theme }) => {
       {dataCards}
     </output>
   )
+}
+
+Container.propTypes = {
+  data: PropTypes.array.isRequired,
+  type: PropTypes.string.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  favorites: PropTypes.array.isRequired,
+  theme: PropTypes.string.isRequired
 }
 
 export default Container;
