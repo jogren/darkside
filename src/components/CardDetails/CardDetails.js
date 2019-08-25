@@ -2,10 +2,11 @@ import React from 'react';
 import './CardDetails.css';
 import { Link } from 'react-router-dom';
 
-const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulation, type, residents, population, language, model, vehicleClass, passengers, favorites }) => {
-  console.log(favorites)
-  const isFavorite = favorites.map(favorite => favorite.name).includes(name) ? 'favorite' : null; 
-  let residentNames = null;
+const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulation, type, residents, population, language, model, vehicleClass, passengers, favorites, theme }) => {
+  const isDark = theme === 'dark' ? 'dark-card' : '';
+  let isFavorite = favorites.map(favorite => favorite.name).includes(name) ? 'favorite' : ''; 
+  isFavorite = theme === 'dark' && isFavorite ? 'dark-favorite' : isFavorite; 
+  let residentNames;
   if (residents) {
     residentNames = residents.map((resident, index) => {
       return <li key={index}>{resident}</li>
@@ -13,7 +14,7 @@ const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulatio
   }
   
   return (
-    <div className={`CardDetails-div ${isFavorite}`}>
+    <div className={`CardDetails-div ${isFavorite} ${isDark}`}>
       <Link to={`/${type}`} className='back-btn'>◀ back</Link>
       <h2>{name}</h2>
       {!name && <p>404: No data found at this location!</p>}

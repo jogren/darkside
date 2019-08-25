@@ -5,7 +5,7 @@ import './Card.css';
 const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
   const isDark = theme === 'dark' ? 'dark-card' : '';
   let isFavorite = favorites.map(favorite => favorite.name).includes(data.name) ? 'favorite' : ''; 
-  isFavorite = theme === 'dark' ? 'dark-favorite' : isFavorite; 
+  isFavorite = theme === 'dark' && isFavorite ? 'dark-favorite' : isFavorite; 
   const { name, homeworld, terrain, climate, species, homePopulation, language, 
     model, vehicleClass, passengers, residents, population } = data;
   let residentNames;

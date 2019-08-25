@@ -26,3 +26,13 @@
 .back-btn:hover {
   color: darkblue;
 }
+
+.dark-card {
+  background: #dddddd;
+}
+
+.dark-favorite {
+  background: #fe1a2d;
+  color: #ffffff;
+  font-weight: bold;
+}

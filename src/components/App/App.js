@@ -73,9 +73,7 @@ class App extends Component {
       .then(data => apiCalls.cleanVehicles(data.results))
       .then(vehicles => this.setState({ vehicles }))
 
-    if (JSON.parse(localStorage.getItem('favorites')) === null) {
-      return;
-    } else {
+    if (localStorage.getItem('favorites')) {
       const favorites = JSON.parse(localStorage.getItem('favorites'));
       this.setState({ favorites });
     }
