@@ -1,13 +1,16 @@
 import React from 'react';
 import './Nav.css';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+
+
 
 const Nav = ({favorites, theme}) => {
   const isDark = theme === 'dark' ? 'dark-nav' : '';
+  
   return (
     <nav>
       <NavLink to='/people' className="link">
-      <div className={`Nav_div Nav-people ${isDark}`}>
+      <div className={`Nav_div Nav-people ${isDark}`} >
         <p className="Nav_p">People</p>
         <img src="https://icon-library.net/images/starwars-icon/starwars-icon-4.jpg" />
       </div>

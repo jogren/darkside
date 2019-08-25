@@ -34,9 +34,9 @@ main {
 }
 
 .light-sabers {
-  height: 50px;
+  height: 40px;
   position: absolute;
-  top: 30px;
+  top: 60px;
   right: 20px;
 }
 

@@ -65,7 +65,7 @@ img {
 }
 
 .active div {
-  background-color: yellow;
+  box-shadow: 0px 0px #fff, -1em 0 0.4em #fff;
 }
 
 .dark-nav {
