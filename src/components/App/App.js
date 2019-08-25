@@ -80,7 +80,7 @@ class App extends Component {
   }
     
   render() {
-    const { planets, people, vehicles, favorites, crawl, isLoading, theme } = this.state;
+    const { planets, people, vehicles, favorites, crawl, theme } = this.state;
     const isDark = theme === 'dark' ? 'dark-theme' : '';
     return (
       <main className={`App-main ${isDark}`}>
