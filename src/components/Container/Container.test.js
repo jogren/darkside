@@ -8,11 +8,14 @@ import { MemoryRouter } from 'react-router'
 import { Route } from 'react-router-dom';
 
 describe('Container ', () => {
-  it('should show Container component for a specific path', () => {
-    const component = mount(<MemoryRouter initialEntries={['/people']} >
-      <App />
-    </MemoryRouter>
-    );
-    // expect(component.find(Card)).toHaveLength(1);
+  it('should match the snapshot with all data passed in correctly', () => {
+    const wrapper = shallow(
+    <Container 
+      data={[{ name: 'Luke Skywalker', homeworld: 'Tatooine', population: 200000, species: 'Human', language: 'Galactic Basic' }]}
+      type="people"
+      toggleFavorites={jest.fn()}
+      favorites={[]}
+    />);
+    expect(wrapper).toMatchSnapshot();
   });
 });

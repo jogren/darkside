@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container  should match the snapshot with all data passed in correctly 1`] = `
+<output>
+  <Card
+    className="Card-section "
+    data={
+      Object {
+        "homeworld": "Tatooine",
+        "language": "Galactic Basic",
+        "name": "Luke Skywalker",
+        "population": 200000,
+        "species": "Human",
+      }
+    }
+    favorites={Array []}
+    key="0"
+    type="people"
+  />
+</output>
+`;

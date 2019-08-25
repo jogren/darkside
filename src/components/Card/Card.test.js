@@ -15,4 +15,28 @@ describe('Card ', () => {
     );
     // expect(component.find(Card)).toHaveLength(1);
   });
+
+  it('should match the people snapshot with all data passed in correctly', () => {
+    const wrapper = shallow(
+      <Card
+        data={{ name: 'Luke Skywalker', homeworld: 'Tatooine', population: 200000, species: 'Human', language: 'Galactic Basic' }}
+        type="people"
+        key={0}
+        toggleFavorites={jest.fn()}
+        favorites={[]}
+      />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should match the planet snapshot with all data passed in correctly', () => {
+    const wrapper = shallow(
+      <Card
+        data={{ name: 'Alderaan', terrain: 'grasslands, mountains', population: 2000000000, climate: 'temperate', residents: ["Leia Organa", "Bail Prestor Organa", "Raymus Antilles"] }}
+        type="planets"
+        key={0}
+        toggleFavorites={jest.fn()}
+        favorites={[]}
+      />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

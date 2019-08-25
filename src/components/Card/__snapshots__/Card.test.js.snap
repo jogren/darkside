@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card  should match the people snapshot with all data passed in correctly 1`] = `
+<article
+  className="Card_section null"
+>
+  <Link
+    className="link"
+    to="/people/LukeSkywalker"
+  >
+    <h3
+      className="Card__article-h3"
+    >
+      Luke Skywalker
+    </h3>
+  </Link>
+  <p>
+    Home: 
+    Tatooine
+  </p>
+  <p>
+    Species: 
+    Human
+  </p>
+  <p>
+    Population: 
+    200000
+  </p>
+  <p>
+    Language: 
+    Galactic Basic
+  </p>
+  <img
+    onClick={[Function]}
+    src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
+  />
+</article>
+`;
+
+exports[`Card  should match the planet snapshot with all data passed in correctly 1`] = `
+<article
+  className="Card_section null"
+>
+  <Link
+    className="link"
+    to="/planets/Alderaan"
+  >
+    <h3
+      className="Card__article-h3"
+    >
+      Alderaan
+    </h3>
+  </Link>
+  <p>
+    Terrain: 
+    grasslands, mountains
+  </p>
+  <p>
+    Climate: 
+    temperate
+  </p>
+  <p>
+    Population: 
+    2000000000
+  </p>
+  <div>
+    <p>
+      Residents: 
+    </p>
+    <ul>
+      <li
+        key="0"
+      >
+        Leia Organa
+      </li>
+      <li
+        key="1"
+      >
+        Bail Prestor Organa
+      </li>
+      <li
+        key="2"
+      >
+        Raymus Antilles
+      </li>
+    </ul>
+  </div>
+  <img
+    onClick={[Function]}
+    src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
+  />
+</article>
+`;
