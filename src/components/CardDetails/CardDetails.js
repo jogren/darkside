@@ -3,7 +3,6 @@ import './CardDetails.css';
 import { Link } from 'react-router-dom';
 
 const CardDetails = ({ name, homeworld, terrain, climate, species, homePopulation, type, residents, population, language, model, vehicleClass, passengers, favorites }) => {
-  console.log(favorites)
   const isFavorite = favorites.map(favorite => favorite.name).includes(name) ? 'favorite' : null; 
   let residentNames = null;
   if (residents) {

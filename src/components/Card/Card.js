@@ -32,9 +32,6 @@ const Card = ({ data, type, toggleFavorite, favorites }) => {
         { passengers && <p>Number of Passengers: {passengers}</p> }
         {residentNames && <div><p>Residents: </p><ul>{residentNames}</ul></div> }
         <img src={starSrc} onClick={() => toggleFavorite(data)}/>
-        {/* <button onClick={() => toggleFavorite(data)}>
-          Favorite
-        </button> */}
     </article>
   )
 }

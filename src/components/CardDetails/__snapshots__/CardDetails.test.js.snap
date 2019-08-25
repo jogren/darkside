@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Details should match the snapshot when a person is displayed with all data passed in correctly 1`] = `
+<div
+  className="CardDetails-div null"
+>
+  <Link
+    className="back-btn"
+    to="/people"
+  >
+    ◀ back
+  </Link>
+  <h2
+    className="CardDetails_h2"
+  >
+    Luke Skywalker
+  </h2>
+  <p>
+    Homeworld: 
+    Tatooine
+  </p>
+  <p>
+    Population: 
+    200000
+  </p>
+  <p>
+    Species: 
+    Human
+  </p>
+  <p>
+    Language: 
+    Galactic Basic
+  </p>
+</div>
+`;
+
+exports[`Card Details should match the snapshot when a planet is displayed with all data passed in correctly 1`] = `
+<div
+  className="CardDetails-div null"
+>
+  <Link
+    className="back-btn"
+    to="/planets"
+  >
+    ◀ back
+  </Link>
+  <h2
+    className="CardDetails_h2"
+  >
+    Alderaan
+  </h2>
+  <p>
+    Terrain: 
+    grasslands, mountains
+  </p>
+  <p>
+    Climate: 
+    temperate
+  </p>
+  <p>
+    Population: 
+    2000000000
+  </p>
+  <div>
+    <p>
+      Residents: 
+    </p>
+    <ul>
+      <li
+        className="CardDetails_li"
+        key="0"
+      >
+        Leia Organa
+      </li>
+      <li
+        className="CardDetails_li"
+        key="1"
+      >
+        Bail Prestor Organa
+      </li>
+      <li
+        className="CardDetails_li"
+        key="2"
+      >
+        Raymus Antilles
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Card Details should match the snapshot when a vehicle is displayed with all data passed in correctly 1`] = `
+<div
+  className="CardDetails-div null"
+>
+  <Link
+    className="back-btn"
+    to="/vehicles"
+  >
+    ◀ back
+  </Link>
+  <h2
+    className="CardDetails_h2"
+  >
+    TIE bomber
+  </h2>
+  <p>
+    Model: 
+    IE/sa bomber
+  </p>
+  <p>
+    Class: 
+    space/planetary bomber
+  </p>
+  <p>
+    Number of Passengers: 
+    0
+  </p>
+</div>
+`;
