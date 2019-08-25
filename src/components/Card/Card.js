@@ -8,12 +8,13 @@ const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
   isFavorite = theme === 'dark' && isFavorite ? 'dark-favorite' : isFavorite; 
   const { name, homeworld, terrain, climate, species, homePopulation, language, 
     model, vehicleClass, passengers, residents, population } = data;
-  let residentNames;
+  let residentNames = null;
   if(residents) {
     residentNames = residents.map((resident, index) => {
       return <li key={index}>{resident}</li>
     });
   };
+  console.log(data)
   const darkTitle = theme === 'dark' ? 'dark-title' : '';
   const starSrc = favorites.map(favorite => favorite.name).includes(data.name) ? 'https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-part-2/512/favourites_favorites_folder-512.png' : 'https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png';
   return (
@@ -31,7 +32,7 @@ const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
         { model && <p>Model: {model}</p> }
         { vehicleClass && <p>Class: {vehicleClass}</p> }
         { passengers && <p>Number of Passengers: {passengers}</p> }
-        {residentNames && <div><p>Residents: </p><ul>{residentNames}</ul></div> }
+        { residents && !!residents.length && <div><p>Residents: </p><ul>{residentNames}</ul></div> }
         <img src={starSrc} onClick={() => toggleFavorite(data)}/>
     </article>
   )

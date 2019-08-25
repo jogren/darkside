@@ -13,7 +13,11 @@
           terrain: planet.terrain,
           population: planet.population,
           climate: planet.climate,
-          residents: names
+          residents: names,
+          rotationPeriod: planet.rotation_period,
+          orbitalPeriod: planet.orbital_period,
+          diameter: planet.diameter,
+          gravity: planet.gravity
         }))
     });
     return Promise.all(planets)
@@ -23,6 +27,9 @@
     return data.map(person => {
         return {
           name: person.name,
+          hairColor: person.hair_color,
+          eyeColor: person.eye_color,
+          birthYear: person.birth_year,
           homeworld: person.homeworld,
           species: person.species,
         }
@@ -67,7 +74,10 @@
         name: vehicle.name,
         model: vehicle.model,
         vehicleClass: vehicle.vehicle_class,
-        passengers: vehicle.passengers
+        passengers: vehicle.passengers,
+        cost: vehicle.cost_in_credits,
+        maxSpeed: vehicle.max_atmosphering_speed, 
+        cargoCapacity: vehicle.cargo_capacity
       }
     })
   }
