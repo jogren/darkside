@@ -20,7 +20,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid black;
+  border: 3px outset black;
   border-radius: 50%;
   padding: 10px;
   background: lightblue;
