@@ -11,7 +11,7 @@ This website was built using the create-react-app starter kit. Dependencies incl
 * Jacob Ogren ([eoneill23](https://github.com/jogren))
 
 ### Project Images
-![Splash screen light](./public/lightTheme1.png)
+<img width="1440" alt="home page light side" src="https://user-images.githubusercontent.com/19739235/63726515-ba312a80-c81a-11e9-8480-c1cc28d5902c.png">
 ![Splash screen dark ](./public/darkTheme1.png)
 ![All cards light](./public/lightTheme2.png)
 ![All cards dark](./public/darkTheme2.png)
