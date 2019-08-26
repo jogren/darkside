@@ -9,17 +9,17 @@ This website was built using the create-react-app starter kit. Dependencies incl
 * Jacob Ogren ([Jogren](https://github.com/jogren))
 
 ### Project Images
-<img width="1440" alt=“main page light side” src="https://user-images.githubusercontent.com/19739235/63726655-1dbb5800-c81b-11e9-94c2-f50d1f2d5fcd.png">
+<img width="1440" alt="Screen Shot 2019-08-26 at 4 00 59 PM" src="https://user-images.githubusercontent.com/19739235/63727178-bdc5b100-c81c-11e9-8cf9-a3a97656ae04.png">
 
-<img width="1440" alt=“main page dark side” src="https://user-images.githubusercontent.com/19739235/63726691-3af02680-c81b-11e9-8cd0-326570623f3e.png">
+<img width="1440" alt="Screen Shot 2019-08-26 at 3 47 42 PM" src="https://user-images.githubusercontent.com/19739235/63727200-cddd9080-c81c-11e9-9a70-3a403b642e29.png">
 
-<img width="1440" alt=“people page light side“ src="https://user-images.githubusercontent.com/19739235/63726722-50fde700-c81b-11e9-8b1e-87f996664b91.png">
+<img width="1440" alt="Screen Shot 2019-08-26 at 3 49 33 PM" src="https://user-images.githubusercontent.com/19739235/63727213-dc2bac80-c81c-11e9-9ead-e2e31c2a32be.png">
 
-<img width="1440" alt=“vehicle page dark side” src="https://user-images.githubusercontent.com/19739235/63726756-6ffc7900-c81b-11e9-91be-36124679b501.png">
+<img width="1440" alt="Screen Shot 2019-08-26 at 3 56 12 PM" src="https://user-images.githubusercontent.com/19739235/63727223-e77ed800-c81c-11e9-9f83-632416d42393.png">
 
-<img width="1440" alt=“favorite’s page light side” src="https://user-images.githubusercontent.com/19739235/63726796-87d3fd00-c81b-11e9-90bc-8aea26a3f595.png">
+<img width="1440" alt="Screen Shot 2019-08-26 at 3 56 59 PM" src="https://user-images.githubusercontent.com/19739235/63727233-f2d20380-c81c-11e9-9fd1-505e10fb0f58.png">
 
-<img width="1440" alt=“card details dark side“ src="https://user-images.githubusercontent.com/19739235/63726821-98847300-c81b-11e9-8596-4c358c661b36.png">
+<img width="1440" alt="Screen Shot 2019-08-26 at 3 57 37 PM" src="https://user-images.githubusercontent.com/19739235/63727248-fd8c9880-c81c-11e9-9046-cdbb08fa06df.png">
 
 ## Built With
 - React
