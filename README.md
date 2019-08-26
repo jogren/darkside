@@ -8,16 +8,15 @@ This website was built using the create-react-app starter kit. Dependencies incl
 
 ## Authors:
 * Djavan Munroe ([Djavanm](https://github.com/djavanm))
-* Jacob Ogren ([eoneill23](https://github.com/jogren))
+* Jacob Ogren ([Jogren](https://github.com/jogren))
 
 ### Project Images
-<img width="1440" alt="home page light side" src="https://user-images.githubusercontent.com/19739235/63726515-ba312a80-c81a-11e9-8480-c1cc28d5902c.png">
-![Splash screen dark ](./public/darkTheme1.png)
-![All cards light](./public/lightTheme2.png)
-![All cards dark](./public/darkTheme2.png)
-![Large card light](./public/lightTheme3.png)
-![Large card dark](./public/darkTheme3.png)
-![Favorites](./public/lightTheme5.png)
+<img width="1440" alt=“main page light side” src="https://user-images.githubusercontent.com/19739235/63726655-1dbb5800-c81b-11e9-94c2-f50d1f2d5fcd.png">
+<img width="1440" alt=“main page dark side” src="https://user-images.githubusercontent.com/19739235/63726691-3af02680-c81b-11e9-8cd0-326570623f3e.png">
+<img width="1440" alt=“people page light side“ src="https://user-images.githubusercontent.com/19739235/63726722-50fde700-c81b-11e9-8b1e-87f996664b91.png">
+<img width="1440" alt=“vehicle page dark side” src="https://user-images.githubusercontent.com/19739235/63726756-6ffc7900-c81b-11e9-91be-36124679b501.png">
+<img width="1440" alt=“favorite’s page light side” src="https://user-images.githubusercontent.com/19739235/63726796-87d3fd00-c81b-11e9-90bc-8aea26a3f595.png">
+<img width="1440" alt=“card details dark side“ src="https://user-images.githubusercontent.com/19739235/63726821-98847300-c81b-11e9-8596-4c358c661b36.png">
 
 
 ## Built With
