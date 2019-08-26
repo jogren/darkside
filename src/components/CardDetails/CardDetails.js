@@ -51,7 +51,7 @@ CardDetails.propTypes = {
   species: PropTypes.string,
   homePopulation: PropTypes.string,
   type: PropTypes.string,
-  residents: PropTypes.string,
+  residents: PropTypes.array,
   population: PropTypes.string,
   language: PropTypes.string,
   model: PropTypes.string,

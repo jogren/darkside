@@ -2,7 +2,7 @@
 
 exports[`Card Details should match the snapshot when a person is displayed with all data passed in correctly 1`] = `
 <div
-  className="CardDetails-div null"
+  className="CardDetails-div  "
 >
   <Link
     className="back-btn"
@@ -36,7 +36,7 @@ exports[`Card Details should match the snapshot when a person is displayed with 
 
 exports[`Card Details should match the snapshot when a planet is displayed with all data passed in correctly 1`] = `
 <div
-  className="CardDetails-div null"
+  className="CardDetails-div  "
 >
   <Link
     className="back-btn"
@@ -91,7 +91,7 @@ exports[`Card Details should match the snapshot when a planet is displayed with 
 
 exports[`Card Details should match the snapshot when a vehicle is displayed with all data passed in correctly 1`] = `
 <div
-  className="CardDetails-div null"
+  className="CardDetails-div  "
 >
   <Link
     className="back-btn"

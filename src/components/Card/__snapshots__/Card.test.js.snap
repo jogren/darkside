@@ -2,14 +2,14 @@
 
 exports[`Card  should match the people snapshot with all data passed in correctly 1`] = `
 <article
-  className="Card_section null"
+  className="Card_section  "
 >
   <Link
     className="link"
     to="/people/LukeSkywalker"
   >
     <h3
-      className="Card__article-h3"
+      className="Card__article-h3 "
     >
       Luke Skywalker
     </h3>
@@ -31,6 +31,7 @@ exports[`Card  should match the people snapshot with all data passed in correctl
     Galactic Basic
   </p>
   <img
+    alt="icon denoting when the card is favorited"
     onClick={[Function]}
     src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
   />
@@ -39,14 +40,14 @@ exports[`Card  should match the people snapshot with all data passed in correctl
 
 exports[`Card  should match the planet snapshot with all data passed in correctly 1`] = `
 <article
-  className="Card_section null"
+  className="Card_section  "
 >
   <Link
     className="link"
     to="/planets/Alderaan"
   >
     <h3
-      className="Card__article-h3"
+      className="Card__article-h3 "
     >
       Alderaan
     </h3>
@@ -86,6 +87,7 @@ exports[`Card  should match the planet snapshot with all data passed in correctl
     </ul>
   </div>
   <img
+    alt="icon denoting when the card is favorited"
     onClick={[Function]}
     src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
   />

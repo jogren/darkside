@@ -3,6 +3,7 @@ import { shallow, mount } from 'enzyme';
 import App from './App';
 import Landing from '../Landing/Landing';
 import Container from '../Container/Container';
+import CardDetails from '../CardDetails/CardDetails';
 import { MemoryRouter } from 'react-router'
 import { Route } from 'react-router-dom';
 
@@ -67,6 +68,46 @@ describe('App', () => {
       </MemoryRouter>
       );
       expect(component.find(Container)).toHaveLength(1);
+    });
+
+    it('should show Container component for /favorites router', () => {
+      const component = mount(<MemoryRouter initialEntries={['/favorites']} >
+        <App />
+      </MemoryRouter>
+      );
+      expect(component.find(Container)).toHaveLength(1);
+    });
+
+    it('should show cardDetails component for /vehicles/:name router', () => {
+      const component = mount(<MemoryRouter initialEntries={['/vehicles/SandCrawler']} >
+        <App />
+      </MemoryRouter>
+      );
+      expect(component.find(CardDetails)).toHaveLength(1);
+    });
+
+    it('should show cardDetails component for /planets/:name router', () => {
+      const component = mount(<MemoryRouter initialEntries={['/planets/Alderaan']} >
+        <App />
+      </MemoryRouter>
+      );
+      expect(component.find(CardDetails)).toHaveLength(1);
+    });
+
+    it('should show cardDetails component for /people/:name router', () => {
+      const component = mount(<MemoryRouter initialEntries={['/people/LukeSkywalker']} >
+        <App />
+      </MemoryRouter>
+      );
+      expect(component.find(CardDetails)).toHaveLength(1);
+    });
+
+    it('should show cardDetails component for /favorites/:name router', () => {
+      const component = mount(<MemoryRouter initialEntries={['/favorites/Snowspeeder']} >
+        <App />
+      </MemoryRouter>
+      );
+      expect(component.find(CardDetails)).toHaveLength(1);
     });
   });
 })

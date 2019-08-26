@@ -3,7 +3,7 @@
 exports[`Container  should match the snapshot with all data passed in correctly 1`] = `
 <output>
   <Card
-    className="Card-section "
+    className="Card-section"
     data={
       Object {
         "homeworld": "Tatooine",
