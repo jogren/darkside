@@ -6,6 +6,7 @@ import CardDetails from '../CardDetails/CardDetails';
 import apiCalls from '../Util/apiCalls';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
+import dualLightSabers from '../../images/dual-light-sabers.png';
 
 class App extends Component {
   constructor() {
@@ -91,7 +92,7 @@ class App extends Component {
           </Link> 
           <img 
           className="light-sabers"
-          src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Dueling_lightsabers.svg/750px-Dueling_lightsabers.svg.png' 
+          src={dualLightSabers} 
           alt='Dueling Lightsabers theme picker' 
           onClick={this.toggleTheme}
           />

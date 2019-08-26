@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
 import PropTypes from 'prop-types';
+import favoriteIcon from '../../images/favorite.png';
+import favoriteActiveIcon from '../../images/favorite-active.png';
 
 const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
   const isDark = theme === 'dark' ? 'dark-card' : '';
@@ -15,7 +17,7 @@ const Card = ({ data, type, toggleFavorite, favorites, theme }) => {
       return <li key={index}>{resident}</li>
     });
   };
-  const starSrc = favorites.map(favorite => favorite.name).includes(data.name) ? 'https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-part-2/512/favourites_favorites_folder-512.png' : 'https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png';
+  const starSrc = favorites.map(favorite => favorite.name).includes(data.name) ? favoriteActiveIcon : favoriteIcon;
   return (
     <article className={`Card_section ${isFavorite} ${isDark}`}>
       <Link to={`/${type}/${name.replace(/\s/g, '').replace("/", "")}`} className="link">
