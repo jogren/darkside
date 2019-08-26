@@ -93,3 +93,37 @@ exports[`Card  should match the planet snapshot with all data passed in correctl
   />
 </article>
 `;
+
+exports[`Card  should match the vehicle snapshot with all data passed in correctly 1`] = `
+<article
+  className="Card_section  "
+>
+  <Link
+    className="link"
+    to="/vehicles/SandCrawler"
+  >
+    <h3
+      className="Card__article-h3 "
+    >
+      Sand Crawler
+    </h3>
+  </Link>
+  <p>
+    Model: 
+    Digger Crawler
+  </p>
+  <p>
+    Class: 
+    wheeled
+  </p>
+  <p>
+    Number of Passengers: 
+    30
+  </p>
+  <img
+    alt="icon denoting when the card is favorited"
+    onClick={[Function]}
+    src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
+  />
+</article>
+`;

@@ -13,8 +13,9 @@ describe('Container ', () => {
     <Container 
       data={[{ name: 'Luke Skywalker', homeworld: 'Tatooine', population: 200000, species: 'Human', language: 'Galactic Basic' }]}
       type="people"
-      toggleFavorites={jest.fn()}
+      toggleFavorite={jest.fn()}
       favorites={[]}
+      theme="light"
     />);
     expect(wrapper).toMatchSnapshot();
   });

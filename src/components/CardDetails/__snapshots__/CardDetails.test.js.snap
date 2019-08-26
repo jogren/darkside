@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card Details should match the snapshot when a favorited card is displayed with all data passed in correctly 1`] = `
+<div
+  className="CardDetails-div dark-favorite dark-card"
+>
+  <Link
+    className="back-btn"
+    to="/favorites"
+  >
+    ◀ back
+  </Link>
+  <h2
+    className="CardDetails_h2"
+  >
+    Luke Skywalker
+  </h2>
+  <p>
+    Homeworld: 
+    Tatooine
+  </p>
+  <p>
+    Population: 
+    200000
+  </p>
+  <p>
+    Species: 
+    Human
+  </p>
+  <p>
+    Language: 
+    Galactic Basic
+  </p>
+  <p>
+    Hair Color: 
+    brown
+  </p>
+  <p>
+    Eye Color: 
+    blue
+  </p>
+  <p>
+    Birth: 
+    1700
+  </p>
+</div>
+`;
+
 exports[`Card Details should match the snapshot when a person is displayed with all data passed in correctly 1`] = `
 <div
   className="CardDetails-div  "
@@ -30,6 +76,18 @@ exports[`Card Details should match the snapshot when a person is displayed with 
   <p>
     Language: 
     Galactic Basic
+  </p>
+  <p>
+    Hair Color: 
+    brown
+  </p>
+  <p>
+    Eye Color: 
+    blue
+  </p>
+  <p>
+    Birth: 
+    1700
   </p>
 </div>
 `;
@@ -86,6 +144,22 @@ exports[`Card Details should match the snapshot when a planet is displayed with 
       </li>
     </ul>
   </div>
+  <p>
+    Orbital Period: 
+    402
+  </p>
+  <p>
+    Rotation Period: 
+    18
+  </p>
+  <p>
+    Diameter: 
+    4900
+  </p>
+  <p>
+    Gravity: 
+    0.85 standard
+  </p>
 </div>
 `;
 
@@ -115,6 +189,21 @@ exports[`Card Details should match the snapshot when a vehicle is displayed with
   <p>
     Number of Passengers: 
     0
+  </p>
+  <p>
+    Cost: 
+    30000
+     Credits
+  </p>
+  <p>
+    Max Atmospheric Speed: 
+    650 km/h
+     km/h
+  </p>
+  <p>
+    Cargo Capacity: 
+    10 tons
+     tons
   </p>
 </div>
 `;

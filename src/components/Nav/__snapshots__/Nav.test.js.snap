@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav should match the snapshot with all data passed in correctly 1`] = `
+<nav>
+  <NavLink
+    className="link"
+    to="/people"
+  >
+    <div
+      className="Nav_div Nav-people "
+    >
+      <p
+        className="Nav_p"
+      >
+        People
+      </p>
+      <img
+        alt="icon of Star Wars droid which displays people cards on click"
+        src="https://icon-library.net/images/starwars-icon/starwars-icon-4.jpg"
+      />
+    </div>
+  </NavLink>
+  <NavLink
+    className="link"
+    to="/planets"
+  >
+    <div
+      className="Nav_div Nav-planets "
+    >
+      <p
+        className="Nav_p"
+      >
+        Planets
+      </p>
+      <img
+        alt="death star icon which displays planet cards on click"
+        src="http://icons.iconarchive.com/icons/sensibleworld/starwars/1024/Death-Star-icon.png"
+      />
+    </div>
+  </NavLink>
+  <NavLink
+    className="link"
+    to="/vehicles"
+  >
+    <div
+      className="Nav_div Nav-vehicles "
+    >
+      <p
+        className="Nav_p"
+      >
+        Vehicles
+      </p>
+      <img
+        alt="tie fighter icon which displays vehicle cards on click"
+        src="https://cdn2.iconfinder.com/data/icons/star-wars-6/24/Tie-Fighter-512.png"
+      />
+    </div>
+  </NavLink>
+  <NavLink
+    className="link"
+    to="/favorites"
+  >
+    <div
+      className="Nav_div Nav-favorites "
+    >
+      <p
+        className="Nav_p"
+      >
+        Favorites
+      </p>
+      <p
+        className="favorite-counter "
+      >
+        <span>
+          0
+        </span>
+      </p>
+      <img
+        alt="favorites star which displays favorite on click"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Linecons_big-star.svg/1024px-Linecons_big-star.svg.png"
+      />
+    </div>
+  </NavLink>
+</nav>
+`;
+
+exports[`Nav should match the snapshot with all data passed in correctly 2`] = `
+<nav>
+  <NavLink
+    className="link"
+    to="/people"
+  >
+    <div
+      className="Nav_div Nav-people dark-nav"
+    >
+      <p
+        className="Nav_p"
+      >
+        People
+      </p>
+      <img
+        alt="icon of Star Wars droid which displays people cards on click"
+        src="https://icon-library.net/images/starwars-icon/starwars-icon-4.jpg"
+      />
+    </div>
+  </NavLink>
+  <NavLink
+    className="link"
+    to="/planets"
+  >
+    <div
+      className="Nav_div Nav-planets dark-nav"
+    >
+      <p
+        className="Nav_p"
+      >
+        Planets
+      </p>
+      <img
+        alt="death star icon which displays planet cards on click"
+        src="http://icons.iconarchive.com/icons/sensibleworld/starwars/1024/Death-Star-icon.png"
+      />
+    </div>
+  </NavLink>
+  <NavLink
+    className="link"
+    to="/vehicles"
+  >
+    <div
+      className="Nav_div Nav-vehicles dark-nav"
+    >
+      <p
+        className="Nav_p"
+      >
+        Vehicles
+      </p>
+      <img
+        alt="tie fighter icon which displays vehicle cards on click"
+        src="https://cdn2.iconfinder.com/data/icons/star-wars-6/24/Tie-Fighter-512.png"
+      />
+    </div>
+  </NavLink>
+  <NavLink
+    className="link"
+    to="/favorites"
+  >
+    <div
+      className="Nav_div Nav-favorites dark-nav"
+    >
+      <p
+        className="Nav_p"
+      >
+        Favorites
+      </p>
+      <p
+        className="favorite-counter dark-nav"
+      >
+        <span>
+          0
+        </span>
+      </p>
+      <img
+        alt="favorites star which displays favorite on click"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Linecons_big-star.svg/1024px-Linecons_big-star.svg.png"
+      />
+    </div>
+  </NavLink>
+</nav>
+`;
