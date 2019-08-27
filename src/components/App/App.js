@@ -51,7 +51,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getMovie()
+    let randomNumber = Math.floor((Math.random() * 7) + 1)
+    getMovie(randomNumber)
       .then(data => this.setState({ crawl: { title: data.title, body: data.opening_crawl } }))
       .catch(error => console.log(error));
   

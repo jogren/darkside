@@ -33,7 +33,7 @@ exports[`Card  should match the people snapshot with all data passed in correctl
   <img
     alt="icon denoting when the card is favorited"
     onClick={[Function]}
-    src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
+    src="favorite.png"
   />
 </article>
 `;
@@ -89,7 +89,7 @@ exports[`Card  should match the planet snapshot with all data passed in correctl
   <img
     alt="icon denoting when the card is favorited"
     onClick={[Function]}
-    src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
+    src="favorite.png"
   />
 </article>
 `;
@@ -123,7 +123,7 @@ exports[`Card  should match the vehicle snapshot with all data passed in correct
   <img
     alt="icon denoting when the card is favorited"
     onClick={[Function]}
-    src="https://cdn1.iconfinder.com/data/icons/office-and-business-14/48/46-512.png"
+    src="favorite.png"
   />
 </article>
 `;

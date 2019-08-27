@@ -1,7 +1,13 @@
-export const getMovie = () => {
-  let randomNumber = Math.floor((Math.random() * 7) + 1)
+export const getMovie = (randomNumber) => {
     return fetch(`https://swapi.co/api/films/${randomNumber}`)
-    .then(res => res.json())
+    .then(res => {
+      if(!res.ok) {
+        throw Error('Error with response.')
+      }
+      return res.json()
+    }).catch(error => {
+      throw Error(error.message)
+    })
 }
 
 export const getPlanets = () => {

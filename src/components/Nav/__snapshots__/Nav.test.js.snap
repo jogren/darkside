@@ -16,7 +16,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 1`] = `
       </p>
       <img
         alt="icon of Star Wars droid which displays people cards on click"
-        src="https://icon-library.net/images/starwars-icon/starwars-icon-4.jpg"
+        src="droid.png"
       />
     </div>
   </NavLink>
@@ -34,7 +34,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 1`] = `
       </p>
       <img
         alt="death star icon which displays planet cards on click"
-        src="http://icons.iconarchive.com/icons/sensibleworld/starwars/1024/Death-Star-icon.png"
+        src="Death-Star-icon.png"
       />
     </div>
   </NavLink>
@@ -52,7 +52,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 1`] = `
       </p>
       <img
         alt="tie fighter icon which displays vehicle cards on click"
-        src="https://cdn2.iconfinder.com/data/icons/star-wars-6/24/Tie-Fighter-512.png"
+        src="Tie-Fighter.png"
       />
     </div>
   </NavLink>
@@ -77,7 +77,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 1`] = `
       </p>
       <img
         alt="favorites star which displays favorite on click"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Linecons_big-star.svg/1024px-Linecons_big-star.svg.png"
+        src="favorite-icon.png"
       />
     </div>
   </NavLink>
@@ -100,7 +100,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 2`] = `
       </p>
       <img
         alt="icon of Star Wars droid which displays people cards on click"
-        src="https://icon-library.net/images/starwars-icon/starwars-icon-4.jpg"
+        src="droid.png"
       />
     </div>
   </NavLink>
@@ -118,7 +118,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 2`] = `
       </p>
       <img
         alt="death star icon which displays planet cards on click"
-        src="http://icons.iconarchive.com/icons/sensibleworld/starwars/1024/Death-Star-icon.png"
+        src="Death-Star-icon.png"
       />
     </div>
   </NavLink>
@@ -136,7 +136,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 2`] = `
       </p>
       <img
         alt="tie fighter icon which displays vehicle cards on click"
-        src="https://cdn2.iconfinder.com/data/icons/star-wars-6/24/Tie-Fighter-512.png"
+        src="Tie-Fighter.png"
       />
     </div>
   </NavLink>
@@ -161,7 +161,7 @@ exports[`Nav should match the snapshot with all data passed in correctly 2`] = `
       </p>
       <img
         alt="favorites star which displays favorite on click"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Linecons_big-star.svg/1024px-Linecons_big-star.svg.png"
+        src="favorite-icon.png"
       />
     </div>
   </NavLink>
