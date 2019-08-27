@@ -1,4 +1,4 @@
-import { getMovie, getPlanets, getPeople, getVehicles } from './apiCalls.js';
+import { getMovie } from './apiCalls.js';
 
 describe('getMovie', () => {
   let mockMovie;

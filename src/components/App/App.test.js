@@ -5,7 +5,6 @@ import Landing from '../Landing/Landing';
 import Container from '../Container/Container';
 import CardDetails from '../CardDetails/CardDetails';
 import { MemoryRouter } from 'react-router'
-import { Route } from 'react-router-dom';
 
 describe('App', () => {
   it.skip('should match the snapshot with all data passed in correctly', () => {
