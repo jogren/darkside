@@ -61,7 +61,7 @@ CardDetails.propTypes = {
   theme: PropTypes.string, 
   rotationPeriod: PropTypes.string, 
   orbitalPeriod: PropTypes.string,
-  diameter: PropTypes.number,
+  diameter: PropTypes.string,
   gravity: PropTypes.string,
   hairColor: PropTypes.string, 
   eyeColor: PropTypes.string, 
