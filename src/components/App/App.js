@@ -3,9 +3,8 @@ import Nav from '../Nav/Nav';
 import Container from '../Container/Container';
 import Landing from '../Landing/Landing';
 import CardDetails from '../CardDetails/CardDetails';
-import apiCalls from '../Util/apiCalls';
+import { getMovie, getPlanets, getPeople, getVehicles } from '../Util/apiCalls';
 import { Route, Link } from 'react-router-dom';
-import { } from ''
 import './App.css';
 import dualLightSabers from '../../images/dual-light-sabers.png';
 
@@ -52,28 +51,21 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let randomNumber = Math.floor((Math.random() * 7) + 1)
-    fetch(`https://swapi.co/api/films/${randomNumber}`)
-      .then(res => res.json())
+    getMovie()
       .then(data => this.setState({ crawl: { title: data.title, body: data.opening_crawl } }))
+      .catch(error => console.log(error));
   
-
-    fetch('https://swapi.co/api/planets/')
-      .then(res => res.json())
-      .then(data => apiCalls.cleanPlanetData(data.results))
+    getPlanets()
       .then(planets => this.setState({ planets, isLoading: false }))
+      .catch(error => console.log(error))
 
-    fetch('https://swapi.co/api/people/')
-      .then(res => res.json())
-      .then(data => apiCalls.cleanPeopleData(data.results))
-      .then(data => apiCalls.getPeopleHomes(data))
-      .then(data => apiCalls.getSpecies(data))
+    getPeople()
       .then(people => this.setState({ people }))
+      .catch(error => console.log(error))
 
-    fetch('https://swapi.co/api/vehicles/')
-      .then(res => res.json())
-      .then(data => apiCalls.cleanVehicles(data.results))
+    getVehicles()
       .then(vehicles => this.setState({ vehicles }))
+      .catch(error => console.log(error))
 
     if (localStorage.getItem('favorites')) {
       const favorites = JSON.parse(localStorage.getItem('favorites'));

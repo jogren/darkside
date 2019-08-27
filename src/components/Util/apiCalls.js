@@ -1,3 +1,25 @@
+export const getMovie = () => {
+  let randomNumber = Math.floor((Math.random() * 7) + 1)
+    return fetch(`https://swapi.co/api/films/${randomNumber}`)
+    .then(res => res.json())
+}
+
+export const getPlanets = () => {
+  return fetch('https://swapi.co/api/planets/')
+      .then(res => res.json())
+      .then(data => cleanPlanetData(data.results))
+      .catch(error => console.log(error))
+}
+
+export const getPeople = () => {
+  return fetch('https://swapi.co/api/people/')
+  .then(res => res.json())
+  .then(data => cleanPeopleData(data.results))
+  .then(data => getPeopleHomes(data))
+  .then(data => getSpecies(data))
+  .catch(error => console.log(error))
+}
+
 export const cleanPlanetData = (data) => {
   const planets = data.map(planet => {
     const namesArray = planet.residents.map(person => {
@@ -66,6 +88,13 @@ export const getSpecies = (data) => {
   })
   return Promise.all(promises)
 };
+
+export const getVehicles = () => {
+  return fetch('https://swapi.co/api/vehicles/')
+      .then(res => res.json())
+      .then(data => cleanVehicles(data.results))
+      .catch(error => console.log(error))
+}
   
 export const cleanVehicles = (data) => {
   return data.map(vehicle => {
