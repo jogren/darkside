@@ -1,8 +1,15 @@
 # Darkside / SwapiBox 
-
 Darkside is one week project for Front End Engineering students at the Turing School of Software & Design. Students were tasked with consuming the Star Wars API (SWAPI) to display information about characters, vehicles, planets, and the films. The user is able to favorite any card on the screen, and their current list of favorites will persist after page relod, using the Local Storage API. 
 
 This website was built using the create-react-app starter kit. Dependencies include Jest/Enzyme for testing, and propTypes to check component types. We also utilized JavaScript ES6+ when creating all components. 
+
+## Learning Goals
+- Make informed design decisions to create a user-friendly application.
+- Keep state based components to a minimum and leverage more functional components.
+- Use a modular architecture for your application file structure.
+- Think deeply about React Lifecycle Methods.
+- Become familiar with promises, nested fetch requests, and handling the UI based on acceptance of data.
+- Write tests for React components, asynchronous functionality, and route handling.
 
 ## Built With
 - React
@@ -12,11 +19,6 @@ This website was built using the create-react-app starter kit. Dependencies incl
 - Enzyme
 - HTML5
 - CSS3
-
-## Installation Steps
-* Clone down this repo
-* npm install
-* npm start
 
 ### Project Images
 <img width="1440" alt="Screen Shot 2019-08-26 at 4 00 59 PM" src="https://user-images.githubusercontent.com/19739235/63727178-bdc5b100-c81c-11e9-8cf9-a3a97656ae04.png">
@@ -30,6 +32,11 @@ This website was built using the create-react-app starter kit. Dependencies incl
 <img width="1440" alt="Screen Shot 2019-08-26 at 3 56 59 PM" src="https://user-images.githubusercontent.com/19739235/63727233-f2d20380-c81c-11e9-9fd1-505e10fb0f58.png">
 
 <img width="1440" alt="Screen Shot 2019-08-26 at 3 57 37 PM" src="https://user-images.githubusercontent.com/19739235/63727248-fd8c9880-c81c-11e9-9046-cdbb08fa06df.png">
+
+## Installation Steps
+* Clone down this repo
+* npm install
+* npm start
 
 ## Authors:
 * Jacob Ogren ([Jogren](https://github.com/jogren))
